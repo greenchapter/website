@@ -3,9 +3,9 @@
 	import github from '$lib/images/github.svg';
 </script>
 <header>
-	<nav>
+<!-- 	<nav>
 		<a href="/">Home</a>
 		<a href="/about">About</a>
-	</nav>
+	</nav> -->
 </header>
 <style></style>

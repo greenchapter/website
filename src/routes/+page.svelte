@@ -11,7 +11,7 @@
 <section>
 	<picture>
 		<source srcset="{github_logo}" type="image/svg" />
-		<img src="{github_logo}" alt="Welcome" />
+		<!-- <img src="{github_logo}" alt="Welcome" /> -->
 	</picture>
 
 	<Component />
