@@ -1,25 +1,26 @@
 @font-face {
-	font-family: 'Inter Display Regular';
-	src: url('/Inter-DisplayRegular.woff2');
-	font-weight: 400;
+	font-family: 'Inter Display V';
+	src: url('/interv.woff2');
 	font-style: normal;
-	font-stretch: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Inter Display Medium';
-	src: url('/Inter-DisplayMedium.woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
-	font-display: swap;
+	font-display: optional;
+  	font-stretch: normal;
+ 	font-display: auto;
 }
 
 :root {
-	--font-body: Inter Display Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+	--font-body: Inter Display V, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		sans-serif;
 	--color-text: rgba(49, 49, 49, 1);
 	font-family: var(--font-body);
 	color: var(--color-text);
 }
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
+}
+
