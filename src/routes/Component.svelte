@@ -7,7 +7,7 @@
 
 <section class="intro">
 	<h1>
-		Director of Technology at Kaiser X Labs and founder of Pace Engineering. <img src="memoji.png" width="75px" /><br />
+		Director of Technology at Kaiser X Labs and founder of Pace Engineering. <br />
 		I develop and design the most engaging contemporary digital product experiences.
 	</h1>
 </section>
