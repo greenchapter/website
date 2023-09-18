@@ -1,6 +1,5 @@
 <script>
-	import Component from './Component.svelte';
-	import github_logo from '$lib/images/github.svg';
+	import Intro from '$lib/components/Intro.svelte';
 </script>
 
 <svelte:head>
@@ -9,12 +8,7 @@
 </svelte:head>
 
 <section>
-	<picture>
-		<source srcset="{github_logo}" type="image/svg" />
-		<!-- <img src="{github_logo}" alt="Welcome" /> -->
-	</picture>
-
-	<Component />
+	<Intro />
 </section>
 
 <style></style>

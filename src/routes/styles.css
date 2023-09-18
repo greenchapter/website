@@ -5,13 +5,11 @@
 	src: url('/interv.woff2');
 	font-style: normal;
 	font-display: optional;
-  	font-stretch: normal;
- 	font-display: auto;
+	font-stretch: normal;
+	font-display: auto;
 }
 
 :root {
-	--font-body: Inter Display V, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		sans-serif;
 	--color-text: rgba(49, 49, 49, 1);
 	--font: 'Inter Variable', sans-serif;
 	font-family: var(--font);
@@ -25,5 +23,6 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
 	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
 }
-
