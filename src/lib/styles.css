@@ -1,0 +1,45 @@
+@import '@fontsource-variable/inter';
+
+:root {
+	--color-text: rgba(15, 15, 15, 1);
+	--font: 'Inter Display V', sans-serif;
+	--font-size: 1.125rem;
+	font-family: var(--font);
+	color: var(--color-text);
+	font-feature-settings:
+		'liga' 1,
+		'calt' 1; /* fix for Chrome */
+}
+
+@font-face {
+	font-family: var(--font);
+	font-style: normal;
+	font-display: optional;
+	font-stretch: normal;
+	font-display: auto;
+}
+
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: var(--font);
+	}
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	font-smooth: never;
+	font-weight: 500;
+}
+
+p {
+	font-family: var(--font);
+	font-size: var(--font-size);
+	color: var(--color-text);
+}

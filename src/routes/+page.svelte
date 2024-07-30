@@ -1,20 +1,14 @@
 <script>
-	import Component from './Component.svelte';
-	import github_logo from '$lib/images/github.svg';
+	import Intro from '$lib/components/Intro.svelte';
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Website Thomas Ott" />
 </svelte:head>
 
 <section>
-	<picture>
-		<source srcset="{github_logo}" type="image/svg" />
-		<img src="{github_logo}" alt="Welcome" />
-	</picture>
-
-	<Component />
+	<Intro />
 </section>
 
 <style></style>
