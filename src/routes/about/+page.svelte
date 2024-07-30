@@ -6,5 +6,7 @@
 <div class="text-column">
 	<h1>About this app</h1>
 
+
+
 	<p>This is a <a href="https://kit.svelte.dev">SvelteKit</a> app.</p>
 </div>

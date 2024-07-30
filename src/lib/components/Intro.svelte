@@ -7,23 +7,21 @@
 	<img width="40px" height="auto" src="{gate}" alt="Welcome to my website" />
 </picture>
 
-<p>
-	Thomas Ott<br />
-	Engineering and Design
-</p>
-
-<p>
-	Currently Director of Technology at Kaiser X Labs and founder of Pace Engineering. I develop and design the most engaging contemporary digital product experiences.
-</p>
+<p>Thomas Ott <span class="grey">Software and Fundamentals</span></p>
 
 <style>
 	p {
-		color: var(--primary-color, #0f0f0f);
+		/*font-family: 'Inter Display V';*/
 		font-family: var(--font);
-		font-size: 16px;
 		font-style: normal;
 		font-weight: 500;
-		line-height: 22px; /* 137.5% */
-		letter-spacing: -0.24px;
+		font-size: 18px;
+		line-height: 22px;
+		color: #0f0f0f;
+	}
+
+	p .grey {
+		color: rgba(15, 15, 15, 0.5);
+		padding-left: 1rem;
 	}
 </style>

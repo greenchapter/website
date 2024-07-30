@@ -1,13 +1,12 @@
 <script>
 	import { page } from '$app/stores';
-	import github from '$lib/images/github.svg';
+	// import github from '$lib/images/github.svg';
 </script>
 <header>
-<!-- 	<nav>
+	<!-- 	<nav>
 		<a href="/">Home</a>
 		<a href="/about">About</a>
 	</nav> -->
-
 </header>
 <style>
 	header {
