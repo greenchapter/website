@@ -1,6 +1,6 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+	import Header from '$lib/components/Header.svelte';
+	import '$lib/styles.css';
 </script>
 
 <div class="app">
@@ -11,16 +11,7 @@
 	<footer></footer>
 </div>
 <style>
-	.app {
-		margin: 56px 32px;
-	}
-
 	main {
-	}
-
-	@media only screen and (max-width: 600px) {
-	}
-
-	footer {
+		margin: 3.5rem 2rem;
 	}
 </style>
