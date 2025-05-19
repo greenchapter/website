@@ -7,7 +7,7 @@
 	<img width="40px" height="auto" src="{gate}" alt="Welcome to my website" />
 </picture>
 
-<p>Thomas Ott <span class="grey">Software and Fundamentals</span></p>
+<p>Thomas Ott <span class="grey">Director of Engineering</span></p>
 
 <style>
 	p .grey {

@@ -3,7 +3,7 @@
 :root {
 	--color-text: rgba(15, 15, 15, 1);
 	--font: 'Inter Display V', sans-serif;
-	--font-size: 1.125rem;
+	--font-size: 1rem;
 	font-family: var(--font);
 	color: var(--color-text);
 	font-feature-settings:
@@ -42,4 +42,11 @@ p {
 	font-family: var(--font);
 	font-size: var(--font-size);
 	color: var(--color-text);
+}
+
+h2 {
+	font-family: var(--font);
+	font-size: var(--font-size);
+	color: var(--color-text);
+	font-weight: 500;
 }
