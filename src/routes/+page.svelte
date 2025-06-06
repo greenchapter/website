@@ -22,11 +22,15 @@
 </style>
 
 <p>
-	I'm a engineering executive who bridges deep technical expertise with strategic business
+	<!-- I'm a engineering executive who bridges deep technical expertise with strategic business
 	insight—enabling organizations to build scalable cloud-native systems, unlock the value of AI, and
 	deliver exceptional human-centered user experiences. With 15+ years of experience, I empower teams
 	to move faster, smarter, and more aligned—driving innovation while maintaining operational
-	excellence.
+	excellence. -->
+
+	I'm a engineering executive at the intersection of technology, business strategy, and innovation. I help organizations scale through engineering leadership, cloud-native architecture, and AI-driven transformation. With a deep passion for user experience and data platforms, I advise on building high-impact digital products and resilient tech teams.
+	<br /><br />
+	As a strategic advisor and angel investor, I support founders and enterprises alike—combining hands-on mentorship with capital to turn bold ideas into scalable solutions.
 	<!-- I'm a engineering executive with 15+ years driving engineering leadership,
 	organizational excellence, and AI-powered cloud products focused on exceptional human-centered user experience
 	and accelerated business growth. -->
@@ -39,7 +43,7 @@ data-centric business growth. -->
 
 <p></p>
 <ul>
-	<li>Strategic AI-Driven Business Development and Innovation Consulting</li>
+	<li>Strategic Business Development and Innovation Consulting Services</li>
 	<!-- <li>
 		Strategic advisory focused on leveraging artificial intelligence to identify and seize business
 		opportunities.
@@ -112,6 +116,7 @@ data-centric business growth. -->
 		Building foundational data infrastructure and governance solutions to ensure compliance,
 		security, and operational effectiveness in machine learning deployments.
 	</li> -->
+	<li>Strategic Mentorship and Expertise Sharing through Angel Investments</li>
 </ul>
 <!-- Guiding strategic decision-making to
 identify and seize emerging business opportunities powered by artificial intelligence. • Offering
