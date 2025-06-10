@@ -4,14 +4,20 @@
 
 <picture>
 	<source srcset="{gate}" type="image/png" />
-	<img width="40px" height="auto" src="{gate}" alt="Welcome to my website" />
+	<img width="50" height="auto" src="{gate}" alt="Welcome to my website" />
 </picture>
 
-<p>Thomas Ott <span class="grey">Director of Engineering</span></p>
+<p>Thomas Ott<br /><span class="grey">Director of Engineering</span></p>
 
 <style>
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
 	p .grey {
 		color: rgba(15, 15, 15, 0.5);
-		padding-left: 1rem;
 	}
+
 </style>

@@ -11,13 +11,55 @@
 	<Intro />
 </section>
 <style>
-	p {
-		color: grey;
-		line-height: 1.25rem;
+	:root {
+		--color-text: #767676;
+		--color-text-light: #b8b8b8;
+	}
+
+	p span, li span {
+		color: var(--color-text);
+	}
+
+	p, h2 {
+		font-size: 1.3rem;
+		line-height: 1.65rem;
+	}
+
+	h2 {
+		color: black;
+		margin-top: 4rem;
+	}
+
+	p, li {
+		color: var(--color-text-light);
 	}
 
 	li {
-		color: grey;
+		font-size: 1.1rem;
+		line-height: 1.45rem;
+	}
+
+	ul {
+		width: 80%;
+		padding: 0;
+		padding-left: 15px;
+		margin-left: 0;
+	}
+
+	@media only screen
+	  and (min-device-width: 720px)
+	  and (-webkit-min-device-pixel-ratio: 2) {
+	  	p {
+	  		width: 38rem;
+	  	}
+	}
+
+	@media only screen
+	  and (max-device-width: 720px)
+	  and (-webkit-min-device-pixel-ratio: 2) {
+	  	p {
+	  		width:92%;
+	  	}
 	}
 </style>
 
@@ -28,9 +70,15 @@
 	to move faster, smarter, and more aligned—driving innovation while maintaining operational
 	excellence. -->
 
-	I'm a engineering executive at the intersection of technology, business strategy, and innovation. I help organizations scale through engineering leadership, cloud-native architecture, and AI-driven transformation. With a deep passion for user experience and data platforms, I advise on building high-impact digital products and resilient tech teams.
-	<br /><br />
-	As a strategic advisor and angel investor, I support founders and enterprises alike—combining hands-on mentorship with capital to turn bold ideas into scalable solutions.
+	I'm a <span>engineering executive</span> at the intersection of
+	<span>human-centered technology, business strategy</span>, and <span>innovation</span>.
+	<br /><br />I help organizations <span>scale through engineering leadership</span>, cloud-native
+	architecture, and <span>AI-driven transformation</span>.<br />
+	<br />With a <span>deep passion for user experience and systems thinking</span>, I advise on
+	building <span>delightful digital products</span> and resilient high-impact services.<br /><br />
+	As a <span>strategic advisor</span> and angel investor, I support founders and enterprises alike —
+	combining hands-on mentorship with capital to
+	<span>turn bold ideas into scalable solutions</span>.
 	<!-- I'm a engineering executive with 15+ years driving engineering leadership,
 	organizational excellence, and AI-powered cloud products focused on exceptional human-centered user experience
 	and accelerated business growth. -->
@@ -43,7 +91,7 @@ data-centric business growth. -->
 
 <p></p>
 <ul>
-	<li>Strategic Business Development and Innovation Consulting Services</li>
+	<li><span>Strategic Business Development</span> and Innovation Consulting Services</li>
 	<!-- <li>
 		Strategic advisory focused on leveraging artificial intelligence to identify and seize business
 		opportunities.
@@ -57,7 +105,7 @@ data-centric business growth. -->
 		with overarching business goals.
 	</li> -->
 
-	<li>Engineering Leadership and Organizational Excellence</li>
+	<li><span>Engineering Leadership</span> and Organizational Excellence</li>
 
 	<!-- <li>
 		Strategic leadership and team management as-a-Service, guiding technical teams to deliver
@@ -72,7 +120,7 @@ data-centric business growth. -->
 		across multiple domains.
 	</li> -->
 
-	<li>Human-Centered Experience Design and Front-End Architecture Advisory</li>
+	<li>Human-Centered Experience Design and <span>Front-End Architecture Advisory</span></li>
 
 	<!-- <li>
 		Design and development of intuitive, engaging user experiences leveraging common front-end
@@ -87,7 +135,7 @@ data-centric business growth. -->
 		with user-centered design principles.
 	</li> -->
 
-	<li>Cloud-Native Architecture and DevOps Acceleration</li>
+	<li><span>Cloud-Native Architecture</span> and DevOps Acceleration</li>
 
 	<!-- <li>
 		Design and implementation of cloud-native architectures using AWS, Azure, and Google Cloud.
@@ -102,7 +150,7 @@ data-centric business growth. -->
 		cloud environments.
 	</li> -->
 
-	<li>Data Engineering and Machine Learning Operations (MLOps) Infrastructure</li>
+	<li>Data Engineering and <span>Machine Learning Operations</span> (MLOps) Infrastructure</li>
 
 	<!-- <li>
 		Development and implementation of robust data engineering and MLOps frameworks to manage
@@ -116,7 +164,7 @@ data-centric business growth. -->
 		Building foundational data infrastructure and governance solutions to ensure compliance,
 		security, and operational effectiveness in machine learning deployments.
 	</li> -->
-	<li>Strategic Mentorship and Expertise Sharing through Angel Investments</li>
+	<li><span>Strategic Mentorship</span> and Expertise Sharing through Angel Investments</li>
 </ul>
 <!-- Guiding strategic decision-making to
 identify and seize emerging business opportunities powered by artificial intelligence. • Offering
