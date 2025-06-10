@@ -40,7 +40,7 @@
 	}
 
 	ul {
-		width: 80%
+		width: 80%;
 		padding: 0;
 		padding-left: 15px;
 		margin-left: 0;

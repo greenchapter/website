@@ -4,7 +4,7 @@
 
 <picture>
 	<source srcset="{gate}" type="image/png" />
-	<img width="50px" height="auto" src="{gate}" alt="Welcome to my website" />
+	<img width="50" height="auto" src="{gate}" alt="Welcome to my website" />
 </picture>
 
 <p>Thomas Ott<br /><span class="grey">Director of Engineering</span></p>
