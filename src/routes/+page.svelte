@@ -11,40 +11,39 @@
 	<Intro />
 </section>
 <style>
+	:root {
+		--color-text: #767676;
+		--color-text-light: #b8b8b8;
+	}
 
 	p span, li span {
-		color: #767676;
+		color: var(--color-text);
+	}
+
+	p, h2 {
+		font-size: 1.3rem;
+		line-height: 1.65rem;
 	}
 
 	h2 {
-		font-size: 1.3rem;
-		line-height: 1.65rem;
 		color: black;
 		margin-top: 4rem;
 	}
 
-	p {
-		font-size: 1.3rem;
-		line-height: 1.65rem;
-		color: #b8b8b8;
+	p, li {
+		color: var(--color-text-light);
 	}
 
 	li {
 		font-size: 1.1rem;
 		line-height: 1.45rem;
-		color: #b8b8b8;
-
 	}
 
 	ul {
 		width: 80%
 		padding: 0;
 		padding-left: 15px;
-  		margin-left: 0;
-	}
-
-	li {
-	color: #b8b8b8;
+		margin-left: 0;
 	}
 
 	@media only screen
@@ -53,7 +52,6 @@
 	  	p {
 	  		width: 38rem;
 	  	}
-
 	}
 
 	@media only screen
@@ -62,9 +60,7 @@
 	  	p {
 	  		width:92%;
 	  	}
-
 	}
-
 </style>
 
 <p>
