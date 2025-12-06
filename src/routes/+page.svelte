@@ -13,7 +13,6 @@
 <style>
 	:root {
 		--color-text: #767676;
-		--color-text-light: #b8b8b8;
 	}
 
 	p span, li span {
@@ -28,10 +27,6 @@
 	h2 {
 		color: black;
 		margin-top: 4rem;
-	}
-
-	p, li {
-		color: var(--color-text-light);
 	}
 
 	li {
