@@ -74,5 +74,5 @@
 	<li>Human-Centered Intelligence Experience Design and Architecture</li>
 	<li>Cloud-Native Architecture and DevOps Acceleration</li>
 	<li>Data Engineering and Intelligent Operations (MLOps) Infrastructure</li>
-	<li>Strategic Advisory and Expertise Sharing through Angel Investments</li>
+	<li>Strategic Advisory and Angel Investment</li>
 </ul>
