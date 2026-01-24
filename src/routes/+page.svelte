@@ -59,7 +59,7 @@
 </style>
 
 <p>
-	I'm a engineering executive at the intersection of human-centered technology, business strategy, and innovation.<br /><br />
+	I'm an engineering executive at the intersection of human-centered technology, business strategy, and innovation.<br /><br />
 
   I help organizations scale through engineering leadership, cloud-native architecture, and AI-driven transformation.<br />
 	With a deep passion for user experience and systems thinking, I advise on
