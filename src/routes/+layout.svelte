@@ -10,6 +10,7 @@
 	</main>
 	<footer></footer>
 </div>
+
 <style>
 	main {
 		margin: 3.5rem 2rem;
