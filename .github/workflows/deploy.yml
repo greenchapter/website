@@ -1,0 +1,96 @@
+name: Build, test and deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deployment
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Validate and deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production
+    env:
+      SSH_HOST: ${{ vars.SSH_HOST }}
+      SSH_USER: ${{ vars.SSH_USER }}
+      SSH_PORT: ${{ vars.SSH_PORT || '22' }}
+      DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Show changes included in this push
+        if: github.event_name == 'push'
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          if [[ "$BEFORE_SHA" =~ ^0+$ ]] || ! git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            git show --format= --name-status "$AFTER_SHA"
+          else
+            git diff --name-status "$BEFORE_SHA" "$AFTER_SHA"
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint the application
+        run: npm run lint
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build the production site
+        run: npm run build
+
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          : "${SSH_PRIVATE_KEY:?The SSH_PRIVATE_KEY secret is not configured}"
+          : "${SSH_KNOWN_HOSTS:?The SSH_KNOWN_HOSTS secret is not configured}"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s\n' "$SSH_PRIVATE_KEY" > "$HOME/.ssh/deploy_key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/deploy_key" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/deploy_key" > /dev/null
+
+      - name: Deploy changed files
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?The SSH_HOST variable is not configured}"
+          : "${SSH_USER:?The SSH_USER variable is not configured}"
+          : "${DEPLOY_PATH:?The DEPLOY_PATH variable is not configured}"
+          [[ "$SSH_PORT" =~ ^[0-9]+$ ]] || { echo "SSH_PORT must be a number" >&2; exit 1; }
+          [[ "$DEPLOY_PATH" == /* ]] || { echo "DEPLOY_PATH must be absolute" >&2; exit 1; }
+          rsync \
+            --recursive \
+            --links \
+            --compress \
+            --checksum \
+            --delete-delay \
+            --delay-updates \
+            --human-readable \
+            --itemize-changes \
+            --rsh "ssh -i $HOME/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts -p $SSH_PORT" \
+            build/ "$SSH_USER@$SSH_HOST:${DEPLOY_PATH%/}/"
